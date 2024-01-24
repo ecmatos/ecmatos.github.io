@@ -36,7 +36,7 @@ const App = () => {
   return (
     <>
       <Global />
-      <Home boxData={data} />
+      <Home items={data} />
     </>
   )
 }

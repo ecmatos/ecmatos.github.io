@@ -8,19 +8,21 @@ interface Item {
   backgroundColor: string;
 }
 
-interface BoxItems extends Array<Item>{}
-
-function Home(boxData: BoxItems) {
-  return (
-      <Container>
-        {boxData.map((box) => (
-          <Box key={box.id} bgColor={box.backgroundColor}>
-            <BoxTitle>{box.title}</BoxTitle>
-            <BoxText>{box.text}</BoxText>
-          </Box>
-        ))}
-      </Container>
-  );
+interface BoxItems {
+  items: Item[];
 }
+
+const Home = (props: BoxItems) => {
+  return (
+    <Container>
+      {props.items.map((box) => (
+        <Box key={box.id} bgColor={box.backgroundColor}>
+          <BoxTitle>{box.title}</BoxTitle>
+          <BoxText>{box.text}</BoxText>
+        </Box>
+      ))}
+    </Container>
+  );
+};
 
 export default Home;
