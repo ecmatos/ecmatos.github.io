@@ -1,5 +1,6 @@
 import { createGlobalStyle } from "styled-components";
-import px2vw from "../utils/px2vw"
+import px2vw from "../utils/px2vw";
+import { colors } from "../data/colors";
 
 export const Global = createGlobalStyle`
     *{
@@ -9,6 +10,8 @@ export const Global = createGlobalStyle`
     }
     :root{
         font-size: ${px2vw(24)};
+        font-family: 'Roboto', 'Arial';
+        background-color: ${colors.bgMain};
 
         @media (min-width: 768px) {
             font-size: ${px2vw(18)};

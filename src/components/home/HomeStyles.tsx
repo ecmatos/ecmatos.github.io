@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import px2vw from "../../utils/px2vw";
 
-interface GlobalProps {
+type GlobalProps = {
     bgColor: string;
 }
 
@@ -9,8 +9,9 @@ export const Container = styled.div`
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin: ${px2vw(32)};
+    margin: ${px2vw(16)};
     max-width: 100%;
+    border: 2px solid black;
 
     @media (min-width: 1024px) {
         flex-wrap: nowrap;
@@ -18,10 +19,10 @@ export const Container = styled.div`
 `;
 
 export const Box = styled.div<GlobalProps>`
-    display: flex;
+    display: block;
     width: ${px2vw(320, 320)};
     min-height: ${px2vw(200, 320)};
-    flex-direction: columns;
+    flex-direction: row;
     padding: ${px2vw(20)};
     margin: ${px2vw(20)};
     background-color: ${props => props.bgColor};
