@@ -20,18 +20,6 @@ let data = [
     text: lorem,
     backgroundColor: "#EDA9A9",
   },
-  {
-    id: Math.random(),
-    title: "Box titulo 3",
-    text: lorem,
-    backgroundColor: "#F2EE8D",
-  },
-  {
-    id: Math.random(),
-    title: "Box titulo 4",
-    text: lorem,
-    backgroundColor: "#9FEACD",
-  },
 ];
 
 const routes = createBrowserRouter([

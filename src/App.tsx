@@ -1,16 +1,12 @@
-import React from 'react';
-import Global from './styles/global';
-import Navbar from './components/navbar/Navbar';
-import { Outlet } from 'react-router-dom';
+import React from "react";
+import Body from "./components/Body";
 
 const App = () => {
   return (
     <>
-      <Global />
-      <Navbar />
-      <Outlet />
+      <Body />
     </>
-  )
-}
+  );
+};
 
 export default App;

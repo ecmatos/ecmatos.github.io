@@ -7,7 +7,7 @@ const NavbarWrapper = styled.nav`
   display: flex;
   align-items: center;
   justify-content: space-around;
-  padding: 2rem;
+  padding: ${px2vw(32)};
   position: relative;
 
   @media (max-width: 768px) {
