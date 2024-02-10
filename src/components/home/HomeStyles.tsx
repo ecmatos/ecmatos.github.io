@@ -15,7 +15,29 @@ export const Container = styled.div`
   max-width: 100%;
 `;
 
-export const Box = styled.div<GlobalProps>`
+export const Box = styled.div`
+  display: block;
+  width: ${px2vw(320, 320)};
+  padding: ${px2vw(20)};
+  margin: ${px2vw(20)};
+
+  @media (min-width: 768px) {
+    width: ${px2vw(320, 768)};
+    min-height: ${px2vw(300)};
+  }
+
+  @media (min-width: 1024px) {
+    width: ${px2vw(350)};
+    min-height: ${px2vw(300)};
+  }
+`;
+
+export const MyImage = styled.img`
+  width: 100%;
+  border-radius: 500px;
+`;
+
+export const Box2 = styled.div<GlobalProps>`
   display: block;
   width: ${px2vw(320, 320)};
   padding: ${px2vw(20)};
