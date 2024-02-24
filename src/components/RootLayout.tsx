@@ -1,25 +1,25 @@
 import React from "react";
-import Global from "../styles/global";
-import Navbar from "./navbar/Navbar";
 import { Outlet } from "react-router-dom";
+import Header from "./header/Header";
 import styled from "styled-components";
+import Global from "../styles/global";
 
-const BodyGrid = styled.div`
+const RootStyles = styled.div`
   display: flex;
   flex-flow: column nowrap;
   height: 100%;
 `;
 
-const Body = () => {
+const RootLayout = () => {
   return (
     <>
       <Global />
-      <BodyGrid>
-        <Navbar />
+      <RootStyles>
+        <Header />
         <Outlet />
-      </BodyGrid>
+      </RootStyles>
     </>
   );
 };
 
-export default Body;
+export default RootLayout;
