@@ -1,29 +1,5 @@
 import React from "react";
-import { Container, Box, Box2, BoxTitle, BoxText, MyImage } from "./HomeStyles";
-
-interface Item {
-  id: number;
-  title: string;
-  text: string;
-  backgroundColor: string;
-}
-
-interface BoxItems {
-  items: Item[];
-}
-
-const Home2 = (props: BoxItems) => {
-  return (
-    <Container>
-      {props.items.map((box) => (
-        <Box2 key={box.id} bgColor={box.backgroundColor}>
-          <BoxTitle>{box.title}</BoxTitle>
-          <BoxText>{box.text}</BoxText>
-        </Box2>
-      ))}
-    </Container>
-  );
-};
+import { Container, Box, BoxTitle, BoxText, MyImage } from "./HomeStyles";
 
 const Home = () => {
   return (
