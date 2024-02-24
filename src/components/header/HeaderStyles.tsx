@@ -3,19 +3,33 @@ import px2vw from "../../utils/px2vw";
 import { NavLink } from "react-router-dom";
 import { colors } from "../../data/colors";
 
-const NavbarWrapper = styled.nav`
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
+const NavbarWrapper = styled.header`
   padding: ${px2vw(32)};
-  position: relative;
 
-  @media (max-width: 768px) {
-    flex-direction: column;
+  .mobile {
+    display: none;
+  }
+
+  @media (max-width: 900px) {
+    > nav {
+      display: none;
+    }
+
+    .mobile {
+      display: initial;
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+    }
   }
 `;
 
-const NavLinkWrapper = styled.div``;
+const NavLinkWrapper = styled.nav`
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+`;
 
 const StyledNavLink = styled(NavLink)`
   text-decoration: none;
