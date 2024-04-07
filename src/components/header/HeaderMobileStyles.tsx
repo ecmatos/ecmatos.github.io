@@ -1,5 +1,6 @@
-import { isVisible } from "@testing-library/user-event/dist/utils";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
+import { NavLink } from "react-router-dom";
+import { colors } from "../../data/colors";
 
 const Container = styled.div<{ $visible: boolean }>`
   position: absolute;
@@ -26,14 +27,30 @@ const Container = styled.div<{ $visible: boolean }>`
     top: 1rem;
     right: 1rem;
   }
+`;
 
-  > nav {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 2rem;
+const NavLinkWrapper = styled.nav`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+`;
+
+const StyledNavLink = styled(NavLink)`
+  text-decoration: none;
+  transition: 0.2s;
+  color: ${colors.textMain};
+  font-size: 1.8rem;
+
+  &:hover {
+    color: ${colors.textEffect};
+  }
+
+  &.active {
+    color: ${colors.textEffect};
+    text-decoration: underline;
   }
 `;
 
-export { Container };
+export { Container, NavLinkWrapper, StyledNavLink };

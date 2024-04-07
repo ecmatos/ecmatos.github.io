@@ -6,7 +6,7 @@ import {
   createRoutesFromElements,
 } from "react-router-dom";
 import Home from "./components/home/Home";
-import Projects from "./components/projects/Projects";
+import Projects from "./components/projects/Project";
 import RootLayout from "./components/RootLayout";
 
 const router = createBrowserRouter(

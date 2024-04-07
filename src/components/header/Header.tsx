@@ -1,4 +1,4 @@
-import React, { Dispatch, useState } from "react";
+import React, { useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import px2vw from "../../utils/px2vw";
 import { NavLinkWrapper, NavbarWrapper, StyledNavLink } from "./HeaderStyles";

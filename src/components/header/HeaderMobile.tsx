@@ -1,8 +1,8 @@
-import React, { Dispatch } from "react";
+import React from "react";
 import { Container } from "./HeaderMobileStyles";
 import { IoCloseSharp } from "react-icons/io5";
 import px2vw from "../../utils/px2vw";
-import { isVisible } from "@testing-library/user-event/dist/utils";
+import { NavLinkWrapper, StyledNavLink } from "./HeaderMobileStyles";
 
 type StateMenuProps = {
   menuIsVisible: boolean;
@@ -10,15 +10,27 @@ type StateMenuProps = {
 };
 
 const HeaderMobile = ({ menuIsVisible, showMenu }: StateMenuProps) => {
-  console.log(menuIsVisible);
-
   return (
     <Container $visible={menuIsVisible}>
       <IoCloseSharp size={px2vw(100)} onClick={() => showMenu()} />
-      <nav>
-        <a href="#">Home</a>
-        <a href="#">Projects</a>
-      </nav>
+      <NavLinkWrapper>
+        <StyledNavLink
+          className={(props) => (props.isActive ? "active" : "")}
+          key={"Home"}
+          to={"/"}
+          onClick={showMenu}
+        >
+          Home
+        </StyledNavLink>
+        <StyledNavLink
+          className={(props) => (props.isActive ? "active" : "")}
+          key={"Projects"}
+          to={"/projects"}
+          onClick={showMenu}
+        >
+          Projects
+        </StyledNavLink>
+      </NavLinkWrapper>
     </Container>
   );
 };
