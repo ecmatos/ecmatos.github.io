@@ -26,16 +26,28 @@ export const Box = styled.div`
 export const MyImage = styled.img`
   width: 100%;
   border-radius: 500px;
+  border: solid 2px black;
 `;
 
-export const BoxTitle = styled.h3`
-  color: #333;
-  font-size: 2rem;
-  text-align: center;
+export const ContactBox = styled.div`
+  display: flex;
+  justify-content: space-around;
+`;
 
-  @media (min-width: 900px) {
-    font-size: 1.5rem;
-  }
+export const ContactLink = styled.a`
+  text-decoration: none;
+`;
+
+export const ContactIcon = styled.img`
+  width: 2em;
+`;
+
+export const BoxTitle = styled.h1`
+  color: #333;
+`;
+
+export const BoxSubTitle = styled.h3`
+  color: #333;
 `;
 
 export const BoxText = styled.p`

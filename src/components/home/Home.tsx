@@ -1,5 +1,15 @@
 import React from "react";
-import { Container, Box, MyImage } from "./HomeStyles";
+import {
+  Container,
+  Box,
+  MyImage,
+  ContactBox,
+  ContactLink,
+  ContactIcon,
+  BoxTitle,
+  BoxSubTitle,
+} from "./HomeStyles";
+import { contacts } from "../../data/contacts/contacts";
 
 const Home = () => {
   function getYearsFromDate(birthDay: string) {
@@ -20,8 +30,8 @@ const Home = () => {
         <MyImage src="images/esron.jpg" alt="Esron's photo" />
       </Box>
       <Box>
-        <h1>Esron Matos</h1>
-        <h3>Data & Analytics Engineer</h3>
+        <BoxTitle>Esron Matos</BoxTitle>
+        <BoxSubTitle>Data & Analytics Engineer</BoxSubTitle>
         <p>
           Hi! I'm {getYearsFromDate("1996-09-21")} years old and have been
           working as a data engineer for 5 years. During this period I was
@@ -34,6 +44,24 @@ const Home = () => {
           important things to me. I look forward to working with people who
           value the same.
         </p>
+        <ContactBox>
+          {contacts.map((contact) => {
+            return (
+              <ContactLink
+                key={contact.id}
+                href={contact.url}
+                target="_blank"
+                title={contact.message}
+              >
+                <ContactIcon
+                  src={contact.image}
+                  alt={contact.altImage}
+                  data-tip={contact.message}
+                />
+              </ContactLink>
+            );
+          })}
+        </ContactBox>
       </Box>
     </Container>
   );
