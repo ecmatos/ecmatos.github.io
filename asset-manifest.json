@@ -1,16 +1,18 @@
 {
   "files": {
-    "main.css": "/static/css/main.073c9b0a.css",
-    "main.js": "/static/js/main.f7bc09d0.js",
-    "static/js/787.1ed0c42c.chunk.js": "/static/js/787.1ed0c42c.chunk.js",
-    "static/media/logo.svg": "/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "main.js": "/static/js/main.23ca90a7.js",
+    "static/media/stock-income-tax.png": "/static/media/stock-income-tax.506559d1547829e780f8.png",
+    "static/media/ecommerce-survival-analysis.png": "/static/media/ecommerce-survival-analysis.21979d7fc9f402f9b6cf.png",
+    "static/media/udacity-airflow-pipeline.png": "/static/media/udacity-airflow-pipeline.ec7abbbc0eb47ab0963f.png",
+    "static/media/udacity-aws-cloud-architect.png": "/static/media/udacity-aws-cloud-architect.dae040ece9c6bc8f3195.png",
+    "static/media/microsoft-exam-sql.png": "/static/media/microsoft-exam-sql.74bc5852c74f49586111.png",
+    "static/media/stedi-step-trainer.png": "/static/media/stedi-step-trainer.5f8e31a8e0e19716095e.png",
+    "static/media/ecmatos-githubio.png": "/static/media/ecmatos-githubio.51f81b89d8142ea7ef55.png",
+    "static/media/music-player-redshift.png": "/static/media/music-player-redshift.88e5be55c2a1ec705a7a.png",
     "index.html": "/index.html",
-    "main.073c9b0a.css.map": "/static/css/main.073c9b0a.css.map",
-    "main.f7bc09d0.js.map": "/static/js/main.f7bc09d0.js.map",
-    "787.1ed0c42c.chunk.js.map": "/static/js/787.1ed0c42c.chunk.js.map"
+    "main.23ca90a7.js.map": "/static/js/main.23ca90a7.js.map"
   },
   "entrypoints": [
-    "static/css/main.073c9b0a.css",
-    "static/js/main.f7bc09d0.js"
+    "static/js/main.23ca90a7.js"
   ]
 }
